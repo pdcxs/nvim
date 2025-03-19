@@ -46,7 +46,6 @@ git clone https://github.com/pdcxs/nvim.git
 
 `markdown-preview` 插件需要安装 `nodejs` 和 `yarn`。如果安装后发现依然无法正常工作，可以执行 `<leader>l`  进入 Lazy 界面，选择 `markdown-preview`，按 `gb` 以进行重新安装。
 
-
 ## 多光标使用说明
 
 采用以下快捷键可以添加多光标：
@@ -89,4 +88,5 @@ git clone https://github.com/pdcxs/nvim.git
 - `<leader>cs` 打开大纲视图
 - `<leader>p` 打开粘贴历史
 - `<leader>gg` 打开 `LazyGit`
+- `<leader>e` 或者 `<leader>E` 打开文件浏览器，根目录与当前目录
 
