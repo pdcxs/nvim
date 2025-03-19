@@ -6,4 +6,9 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.g.neovide_scale_factor = 1.0
 end
-vim.opt.wrap = true
+
+local opt = vim.opt
+
+opt.wrap = true
+opt.spelllang = { "en", "cjk" }
+opt.linebreak = false

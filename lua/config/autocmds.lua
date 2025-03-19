@@ -20,4 +20,4 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- 停止 markdown 拼写检查
-vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+-- vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")

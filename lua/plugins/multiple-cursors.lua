@@ -13,12 +13,8 @@ return {
     },
   }, -- This causes the plugin setup function to be called
   keys = {
-    { "<C-A-j>", "<Cmd>MultipleCursorsAddDown<CR>", mode = { "n", "x" }, desc = "Add cursor and move down" },
-    { "<C-A-k>", "<Cmd>MultipleCursorsAddUp<CR>", mode = { "n", "x" }, desc = "Add cursor and move up" },
-
-    { "<C-Up>", "<Cmd>MultipleCursorsAddUp<CR>", mode = { "n", "i", "x" }, desc = "Add cursor and move up" },
-    { "<C-Down>", "<Cmd>MultipleCursorsAddDown<CR>", mode = { "n", "i", "x" }, desc = "Add cursor and move down" },
-
+    { "<leader>j", "<Cmd>MultipleCursorsAddDown<CR>", mode = { "n", "x" }, desc = "Add cursor and move down" },
+    { "<leader>k", "<Cmd>MultipleCursorsAddUp<CR>", mode = { "n", "x" }, desc = "Add cursor and move up" },
     { "<C-LeftMouse>", "<Cmd>MultipleCursorsMouseAddDelete<CR>", mode = { "n", "i" }, desc = "Add or remove cursor" },
 
     {
@@ -28,21 +24,21 @@ return {
       desc = "Add cursors to the lines of the visual area",
     },
 
-    { "<Leader>a", "<Cmd>MultipleCursorsAddMatches<CR>", mode = { "n", "x" }, desc = "Add cursors to cword" },
+    { "<Leader>a", "<Cmd>MultipleCursorsAddMatches<CR>", mode = { "n", "x" }, desc = "Add cursors to word" },
     {
       "<Leader>A",
       "<Cmd>MultipleCursorsAddMatchesV<CR>",
       mode = { "n", "x" },
-      desc = "Add cursors to cword in previous area",
+      desc = "Add cursors to word in previous area",
     },
 
     {
       "gb",
       "<Cmd>MultipleCursorsAddJumpNextMatch<CR>",
       mode = { "n", "x" },
-      desc = "Add cursor and jump to next cword",
+      desc = "Add cursor and jump to next word",
     },
-    { "gB", "<Cmd>MultipleCursorsJumpNextMatch<CR>", mode = { "n", "x" }, desc = "Jump to next cword" },
+    { "gB", "<Cmd>MultipleCursorsJumpNextMatch<CR>", mode = { "n", "x" }, desc = "Jump to next word" },
 
     { "gl", "<Cmd>MultipleCursorsLock<CR>", mode = { "n", "x" }, desc = "Lock virtual cursors" },
   },
