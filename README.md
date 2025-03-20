@@ -82,11 +82,12 @@ git clone https://github.com/pdcxs/nvim.git
 - `<leader>w`窗口相关操作
 - `<leader>b`buffer相关操作
 - 窗口与buffer相关操作：`o`：关闭其他，`d`：关闭当前
-- 下一个 buffer 和上一个 buffer：`]b` `[b
+- 下一个 buffer 和上一个 buffer：`]b` `[b` 或者 `<S-h>` `<S-l>`
 - 退出软件：`<leader>qq`
 - `<C-hjkl>` 移动到其他窗口
 - `<leader>cs` 打开大纲视图
 - `<leader>p` 打开粘贴历史
 - `<leader>gg` 打开 `LazyGit`
 - `<leader>e` 或者 `<leader>E` 打开文件浏览器，根目录与当前目录
+- `<A-j>` `<A-k>` 移动当前行或者选中的行
 
