@@ -16,8 +16,7 @@ opt.spelllang = { "en", "cjk" }
 opt.linebreak = false
 
 vim.g.root_spec = {
-  "xmake.lua",
   "lsp",
-  { ".git", "lua" },
+  { "xmake.lua", ".git", "lua" },
   "cwd",
 }
