@@ -15,8 +15,4 @@ opt.wrap = true
 opt.spelllang = { "en", "cjk" }
 opt.linebreak = false
 
-vim.g.root_spec = {
-  "lsp",
-  { "xmake.lua", ".git", "lua" },
-  "cwd",
-}
+vim.g.root_spec = { "cwd" }
