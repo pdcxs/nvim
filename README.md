@@ -45,6 +45,7 @@ git clone https://github.com/pdcxs/nvim.git
 2. nodejs 与 yarn
 3. [CaskaydiaCove Nerd Font](https://www.nerdfonts.com/font-downloads)
 4. [NeoVide](https://neovide.dev/)
+5. `lazyvim` 中的其他依赖，如 `fzf`、`fd`等
 
 `markdown-preview` 插件需要安装 `nodejs` 和 `yarn`。如果安装后发现依然无法正常工作，可以执行 `<leader>l` 进入 Lazy 界面，选择 `markdown-preview`，按 `gb` 以进行重新安装。
 
@@ -95,7 +96,7 @@ git clone https://github.com/pdcxs/nvim.git
 
 ## 如何自定义 `nvim-data` 与 `nvim` 的路径
 
-`nvim` 会保存我们的配置文件，而插件、`mason` 对应的插件等内容，都会保存在 `nvim-data` 目录下。对于 `Windows` 平台，`nvim` 与 `nvim-data` 默认保存在 `%LOCALAPPDATA%` 中，但是由于这个位置一般位于 C 盘，而 `nvim-data` 又通常比较大（有时候能达到 3 Gb 左右），所以有需要更改它们的位置。
+`nvim` 文件夹会保存我们的配置文件，而插件、`mason` 对应的插件等内容，都会保存在 `nvim-data` 文件夹下。对于 `Windows` 平台，`nvim` 与 `nvim-data` 默认保存在 `%LOCALAPPDATA%` 中，但是由于这个位置一般位于 C 盘，而 `nvim-data` 又通常比较大（有时候能达到 3 Gb 左右），所以有时需要更改它们的位置以减少对系统盘的占用。
 
 幸运的是，`neovim` 在 `Windows` 平台依然支持 `xdg` 标准。可以执行以下 `ps1` 脚本，来设置好对应环境变量。设置好以后需要重启终端，如果还是没有效果，则需要重新安装 `neovim`。
 
