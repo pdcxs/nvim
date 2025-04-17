@@ -7,6 +7,16 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+vim.cmd([[
+  if has('win32') || has('win64')
+    let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
+    let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';Remove-Alias -Force -ErrorAction SilentlyContinue tee;'
+    let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
+    let &shellpipe  = '2>&1 | %%{ "$_" } | tee %s; exit $LastExitCode'
+    set shellquote= shellxquote=
+  endif
+  ]])
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "lua",
   callback = function()
@@ -16,6 +26,35 @@ vim.api.nvim_create_autocmd("FileType", {
     if filename == "xmake.lua" then
       vim.b.autoformat = false
     end
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "java",
+  callback = function()
+    vim.keymap.set("n", "<leader>cj", function()
+      local filename = vim.fn.expand("%:t") -- 获取带扩展名的文件名
+      local file_dir = vim.fn.expand("%:p:h")
+      vim.cmd("w")
+      local cmd = string.format("java %s", filename)
+      Snacks.terminal(cmd, {
+        cwd = file_dir,
+        auto_close = false,
+        interactive = true,
+      })
+    end, { desc = "Run Java File", buffer = true })
+    vim.keymap.set("n", "<leader>cJ", function()
+      local filename = vim.fn.expand("%:t") -- 获取带扩展名的文件名
+      local classname = vim.fn.expand("%:t:r") -- 获取类名（无扩展名）
+      local file_dir = vim.fn.expand("%:p:h")
+      vim.cmd("w")
+      local cmd = string.format("javac %s && java %s", filename, classname)
+      Snacks.terminal(cmd, {
+        cwd = file_dir,
+        auto_close = false,
+        interactive = true,
+      })
+    end, { desc = "Compile & Run Java File", buffer = true })
   end,
 })
 
