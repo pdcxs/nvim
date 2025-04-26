@@ -58,7 +58,6 @@ git clone https://github.com/pdcxs/nvim.git
 | `<leader>j` | 向下添加光标                           |
 | `<leader>k` | 向上添加光标                           |
 | `<leader>m` | 在选择区域所在的行添加光标             |
-| `<leader>a` | 在所有匹配的位置添加光标               |
 | `<leader>A` | 在所有与选中内容匹配的位置添加光标     |
 | `gb`        | 在当前匹配处添加光标并跳转至下一个匹配 |
 | `gB`        | 忽略当前匹配，直接跳转至下一个匹配     |
