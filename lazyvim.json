@@ -17,7 +17,9 @@
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.yaml",
-    "lazyvim.plugins.extras.ui.mini-indentscope"
+    "lazyvim.plugins.extras.ui.mini-indentscope",
+    "lazyvim.plugins.extras.util.dot",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "install_version": 8,
   "news": {
