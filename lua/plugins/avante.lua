@@ -8,11 +8,11 @@ return {
       enable_cursor_planning_mode = true,
     },
     cursor_applying_provider = "mistral",
-    ollama = {
-      endpoint = "http://127.0.0.1:11434",
-      model = "llama3:latest",
-    },
-    vendors = {
+    providers = {
+      ollama = {
+        endpoint = "http://127.0.0.1:11434",
+        model = "llama3:latest",
+      },
       mistral = {
         __inherited_from = "openai",
         api_key_name = "MISTRAL_API_KEY",
