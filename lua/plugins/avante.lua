@@ -18,12 +18,14 @@ return {
         api_key_name = "MISTRAL_API_KEY",
         endpoint = "https://api.mistral.ai/v1/",
         model = "codestral-latest",
-        max_tokens = 4096,
+        extra_request_body = {
+          max_tokens = 4096,
+        },
       },
     },
   },
   build = (package.config:sub(1, 1) == "\\") -- is windows
-      and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+      and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource true"
     or "build",
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
