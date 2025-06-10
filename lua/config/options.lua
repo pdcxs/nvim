@@ -7,6 +7,7 @@ if vim.g.neovide then
   vim.g.neovide_scale_factor = 0.9
   -- turn off animate becuase we are using neovide
   vim.g.snacks_animate = false
+  -- vim.g.neovide_fullscreen = true
 end
 
 local opt = vim.opt
