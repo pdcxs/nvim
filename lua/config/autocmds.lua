@@ -61,20 +61,4 @@ if not vim.g.vscode then
 
   -- 停止 markdown 拼写检查
   -- vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
-
-  -- use ruff other than pyright if possible
-  require("lspconfig").pyright.setup({
-    settings = {
-      pyright = {
-        -- Using Ruff's import organizer
-        disableOrganizeImports = true,
-      },
-      python = {
-        analysis = {
-          -- Ignore all files for analysis to exclusively use Ruff for linting
-          ignore = { "*" },
-        },
-      },
-    },
-  })
 end
