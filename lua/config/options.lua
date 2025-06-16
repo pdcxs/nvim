@@ -17,5 +17,3 @@ opt.spelllang = { "en", "cjk" }
 opt.linebreak = false
 
 vim.g.root_spec = { "cwd" }
-
-vim.g.lazyvim_prettier_needs_config = false
