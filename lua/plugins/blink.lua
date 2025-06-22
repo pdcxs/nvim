@@ -2,8 +2,9 @@ return {
   "Saghen/blink.cmp",
   opts = {
     keymap = {
-      preset = "super-tab",
-      ["<CR>"] = { "accept", "fallback" },
+      preset = "enter",
+      ["<Tab>"] = { "select_next", "fallback" },
+      ["<S-Tab>"] = { "select_prev", "fallback" },
     },
   },
 }
