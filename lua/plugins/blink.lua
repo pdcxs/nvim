@@ -1,5 +1,5 @@
 return {
-  "Saghen/blink.cmp",
+  "saghen/blink.cmp",
   dependencies = {
     "Kaiser-Yang/blink-cmp-avante",
   },
