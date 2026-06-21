@@ -47,6 +47,7 @@ git clone https://github.com/pdcxs/nvim.git
 4. [NeoVide](https://neovide.dev/)
 5. `lazyvim` 中的其他依赖，如 `fzf`、`fd`等
 6. 中文输入法自动切换，需要安装 [`im-select`](https://github.com/keaising/im-select.nvim)
+7. [Jujutsu](https://github.com/jj-vcs/jj) and [jjui](https://github.com/idursun/jjui) (如果不使用jjui，请删除lazyjui插件)
 
 `markdown-preview` 插件需要安装 `nodejs` 和 `yarn`。如果安装后发现依然无法正常工作，可以执行 `<leader>l` 进入 Lazy 界面，选择 `markdown-preview`，按 `gb` 以进行重新安装。
 
